@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+    <link rel="stylesheet" href="./asset/style.css">
+</head>
+<body>
+    
+    <div class="atm-container">
+        <div class="atm-screen">
+            <h2>ATM Machine</h2>
+            <div id="message">Enter PIN to proceed</div>
+        </div>
+
+        <div class="atm-card">
+            <label for="pin">PIN:</label>
+            <input type="password" id="pin" maxlength="4">
+            <button onclick="verifyPin()">Submit</button>
+        </div>
+
+        <div class="atm-options" id="atm-options">
+            <button onclick="checkBalance()">Check Balance</button>
+            <button onclick="withdraw()">Withdraw Money</button>
+            <button onclick="logout()">Log Out</button>
+        </div>
+
+        <div class="withdrawal-section" id="withdrawal-section" style="display: none;">
+            <label for="amount">Enter Amount to Withdraw:</label>
+            <input type="number" id="amount" min="10" max="1000">
+            <button onclick="processWithdrawal()">Withdraw</button>
+            <button onclick="cancelWithdrawal()">Cancel</button>
+        </div>
+
+        <div class="atm-footer">
+            <p>ATM Demo - 2024</p>
+        </div>
+    </div>
+
+    
+
+
+
+    <script src="./asset/app.js"></script>
+</body>
+</html>
